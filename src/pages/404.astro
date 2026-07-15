@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Seite nicht gefunden | tehTino" description="Diese Seite existiert nicht.">
+	<section class="flex flex-1 flex-col items-center justify-center px-6 py-32 text-center">
+		<p class="text-7xl font-extrabold tracking-tight text-purple-400">404</p>
+		<h1 class="mt-4 text-3xl font-bold sm:text-4xl">Seite nicht gefunden</h1>
+		<p class="mt-4 max-w-md text-slate-300">
+			Die gesuchte Seite gibt es leider nicht – vielleicht ist sie gerade offline.
+		</p>
+		<a
+			href="/"
+			class="mt-10 inline-flex items-center justify-center rounded-xl bg-purple-600 px-8 py-4 font-semibold text-white shadow-lg shadow-purple-900/40 transition hover:bg-purple-500"
+		>
+			Zurück zur Startseite
+		</a>
+	</section>
+</Layout>

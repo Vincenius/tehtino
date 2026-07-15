@@ -1,0 +1,16 @@
+node_modules
+dist
+.astro
+.git
+.vscode
+.idea
+.yarn
+.env
+.env.*
+*.log
+.DS_Store
+Dockerfile
+compose.yaml
+README.md
+AGENTS.md
+CLAUDE.md

@@ -1,0 +1,26 @@
+---
+interface Props {
+	user: string;
+	domain: string;
+}
+
+const { user, domain } = Astro.props;
+const reverse = (s: string) => [...s].reverse().join('');
+---
+
+<a
+	href="#"
+	class="email-link text-purple-400 underline hover:text-purple-300"
+	data-user={reverse(user)}
+	data-domain={reverse(domain)}
+></a>
+<noscript>{user}&nbsp;[at]&nbsp;{domain.replace('.', ' [punkt] ')}</noscript>
+
+<script>
+	const reverse = (s: string) => [...s].reverse().join('');
+	document.querySelectorAll<HTMLAnchorElement>('a.email-link[data-user]').forEach((el) => {
+		const address = `${reverse(el.dataset.user!)}@${reverse(el.dataset.domain!)}`;
+		el.href = `mailto:${address}`;
+		el.textContent = address;
+	});
+</script>
